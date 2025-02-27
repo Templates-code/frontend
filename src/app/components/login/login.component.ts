@@ -17,8 +17,4 @@ export class LoginComponent {
   constructor(public formValidation: FormValidationService, ){
   }
 
-  ngOnInit(){
-    console.log("init");
-    throw new Error('Error forzado para probar el ErrorHandler');
-  }
 }
