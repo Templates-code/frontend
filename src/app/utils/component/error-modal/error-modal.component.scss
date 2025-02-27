@@ -1,0 +1,27 @@
+mat-icon{
+  font-size: 9vw;
+  height: 9vw;
+  width: 9vw;
+  text-align: center;
+}
+
+button{
+  width: 50%;
+}
+
+mat-dialog-content{
+  text-align: center;
+  p{
+    word-wrap: break-word;
+  }
+}
+
+mat-dialog-actions{
+  display: flex;
+  justify-content: center;
+}
+
+mat-dialog-content, mat-dialog-actions{
+  padding: 4%;
+}
+

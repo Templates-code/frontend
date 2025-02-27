@@ -1,0 +1,16 @@
+.formContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.submitCont{
+  display: flex;
+  justify-content: center;
+}
+
+.lineRegister{
+  margin-top: 15%;
+  a{
+    text-decoration: none;
+  }
+}

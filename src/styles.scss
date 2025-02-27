@@ -1,0 +1,129 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+$custom-purple: (
+  50: #f4e6ff,
+  100: #e4c7ff,
+  200: #d3a5ff,
+  300: #c383ff,
+  400: #b76aff,
+  500: #bc8afb,  // Color principal
+  600: #a755eb,
+  700: #963ed9,
+  800: #8426c7,
+  900: #720fb5,
+  A100: #f0dbff,
+  A200: #d39aff,
+  A400: #bc8afb,
+  A700: #7d3fae,
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: black,
+    A400: white,
+    A700: white,
+  )
+);
+
+$custom-blue: (
+  50: #e3f0ff,
+  100: #b8d4ff,
+  200: #8ab8ff,
+  300: #5c9cff,
+  400: #3787ff,
+  500: #176dff, // Color principal
+  600: #0f61eb,
+  700: #0a52d9,
+  800: #0643c7,
+  900: #0230b5,
+  A100: #d6e6ff,
+  A200: #8ab8ff,
+  A400: #176dff,
+  A700: #0643c7,
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: black,
+    A400: white,
+    A700: white,
+  )
+);
+
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: mat.define-palette($custom-purple, 500, 100, 900),
+    accent: mat.define-palette(mat.$cyan-palette, A200),
+    warn: mat.define-palette(mat.$red-palette, A200),
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+$my-primary: mat.define-palette($custom-blue, 500, 100, 900);
+$my-accent: mat.define-palette(mat.$orange-palette, A700);
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+
+
+
+
+[data-theme="dark-theme"] {
+  @include mat.all-component-themes($dark-theme);
+  ---background-color: #191919;
+  ---background-second:#242424;
+  ---color-text: white;
+}
+
+[data-theme="light-theme"] {
+  @include mat.all-component-themes($light-theme);
+  ---background-color: #f1f5ff;
+  ---background-second:#ffffff;
+  ---color-text: black;
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", serif;
+  background-color: var(---background-color);
+  color: var(---color-text);
+
+}

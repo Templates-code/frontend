@@ -1,0 +1,15 @@
+{
+  "login":"ingresar",
+  "spanish":"español",
+  "english":"ingles",
+  "usuario":"usuario",
+  "password":"contraseña",
+  "witout_account": "no tienes cuenta?",
+  "register_here":"registrate aqui",
+  "validationRequired":"el campo es obligatorio",
+  "validationMinLength":"debe tener al menos el minimo caracteres permitido",
+  "email":"no es un email valido",
+  "pattern":"el formato no es correcto",
+  "error":"error",
+  "descError":"Se ha producido un error inesperado. Por favor, intenta nuevamente o contacta al soporte técnico si el problema persiste."
+}

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="toolbar">
+
+    <span class="example-spacer"></span>
+
+    <div class="toggle-switch">
+      <label class="switch-label">
+        <input type="checkbox" class="checkbox" (change)="toggleTheme($event)" checked="true">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <button mat-icon-button  [matMenuTriggerFor]="menu">
+      <span class="fi fi-{{currentLng.flagCode}}"></span>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let lng of languajes" (click)="setLng(lng)" >
+        {{ lng.name | translate | titlecase}}
+        <span class='fi fi-{{lng.flagCode}}'></span>
+      </button>
+    </mat-menu>
+
+  </div>
+
+  <div class="content">
+
+    <mat-card class="card">
+
+      <mat-tab-group>
+        <mat-tab [label]="'login' | translate | titlecase">
+          <app-login></app-login>
+        </mat-tab>
+        <mat-tab label="Registro"> Content 2 </mat-tab>
+      </mat-tab-group>
+
+
+    </mat-card>
+  </div>
+
+</div>

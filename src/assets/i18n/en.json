@@ -1,0 +1,15 @@
+{
+  "login":"login",
+  "spanish":"spanish",
+  "english":"english",
+  "usuario":"user",
+  "password":"password",
+  "witout_account": "dont you have account yet?",
+  "register_here":"register here",
+  "validationRequired":"the field is required",
+  "validationMinLength":"must have at least the minimum allowed characters ",
+  "email":"it isnt an email",
+  "pattern":"the pattern is not correct",
+  "error":"error",
+  "descError":"An unexpected error has occurred. Please try again or contact support if the problem persists."
+}
